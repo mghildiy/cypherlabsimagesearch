@@ -15,6 +15,7 @@ class Perceptron:
    # X: feature matrix for data points
    # y: labels
    def fit(self, X, y, epochs=10):
+       # add one to data points to make way for biases in weights matrix
        ones = np.ones((X.shape[0]))
        print(ones)
        X = np.c_[X, ones]
@@ -23,6 +24,9 @@ class Perceptron:
        for epoch in np.arange(0, epochs):
            for (x, target) in zip(X, y):
                print(x)
+               # we multiply signal strength and weight
+               # for every connection from input node to perceptron. This is a generic approach and we can use it
+               # in every NN architecture
                weightedInput = np.dot(x, self.W)
                print(weightedInput)
                p = self.step(weightedInput)

@@ -5,6 +5,9 @@
 .Trashes
 Icon?
 
+# python compiled
+*.pyc
+
 # Windows
 ehthumbs.db
 Thumbs.db
