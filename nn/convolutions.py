@@ -28,9 +28,9 @@ def convolve(image, kernel):
 
     return output
 
-ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", required=True, help="path to the input image")
-args = vars(ap.parse_args())
+#ap = argparse.ArgumentParser()
+#ap.add_argument("-i", "--image", required=True, help="path to the input image")
+#args = vars(ap.parse_args())
 
 # construct average blurring kernels used to smooth an image
 smallBlur = np.ones((7, 7), dtype="float") * (1.0 / (7 * 7))
