@@ -37,11 +37,11 @@ class MiniVGGNet:
         # second CONV => RELU => CONV => RELU => POOL => DROPOUT
         model.add(Conv2D(64, (3, 3), padding="same"))
         model.add(Activation("relu"))
-        # model.add(BatchNormalization(axis=chanDim))
+        model.add(BatchNormalization(axis=chanDim))
         # CONV => RELU
         model.add(Conv2D(64, (3, 3), padding="same"))
         model.add(Activation("relu"))
-        # model.add(BatchNormalization(axis=chanDim))
+        model.add(BatchNormalization(axis=chanDim))
         # max pooling
         model.add(MaxPooling2D(pool_size=(2, 2)))
         # dropout

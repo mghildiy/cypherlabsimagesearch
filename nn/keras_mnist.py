@@ -61,7 +61,7 @@ H = model.fit(trainX, trainY, validation_data=(testX, testY), epochs=numEpochs, 
 # evaluate the network
 print("[INFO] evaluating network...")
 predictions = model.predict(testX, batch_size=128)
-# predictions is an array of shape (17500, 10). Each row has 1o entries, with each entry being a probability value
+# predictions is an array of shape (17500, 10). Each row has 10 entries, with each entry being a probability value
 print(classification_report(testY.argmax(axis=1), predictions.argmax(axis=1), target_names=[str(x) for x in lb.classes_]))
 
 # plot the training loss and accuracy
